@@ -53,7 +53,9 @@ describe('matchesRule', () => {
   });
 
   it('ignores disabled rules', () => {
-    expect(matchesRule({ ...baseRule, enabled: false }, 'https://example.com/file.zip')).toBe(false);
+    expect(matchesRule({ ...baseRule, enabled: false }, 'https://example.com/file.zip')).toBe(
+      false,
+    );
   });
 });
 
@@ -80,4 +82,3 @@ describe('findBestRuleForUrls', () => {
     expect(match?.hostname).toBe('ilovepdf.com');
   });
 });
-

@@ -65,4 +65,3 @@ export function hasPathTraversal(path: string): boolean {
     .split('/')
     .some((segment) => segment.trim() === '..');
 }
-

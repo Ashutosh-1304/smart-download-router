@@ -3,4 +3,3 @@ export function logDebug(message: string, ...details: unknown[]): void {
     console.debug(`[Smart Download Router] ${message}`, ...details);
   }
 }
-

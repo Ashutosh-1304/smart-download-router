@@ -415,7 +415,9 @@ async function handleImportRules(input: HTMLInputElement): Promise<void> {
 
     if (
       rules.length > 0 &&
-      !window.confirm(`Replace ${rules.length} existing rules with ${importedRules.length} imported rules?`)
+      !window.confirm(
+        `Replace ${rules.length} existing rules with ${importedRules.length} imported rules?`,
+      )
     ) {
       return;
     }

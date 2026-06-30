@@ -38,4 +38,3 @@ export const DEFAULT_RULES: DownloadRule[] = [
 export function createDefaultRules(): DownloadRule[] {
   return DEFAULT_RULES.map((rule) => ({ ...rule }));
 }
-

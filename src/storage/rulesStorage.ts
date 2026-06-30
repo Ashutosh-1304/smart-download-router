@@ -38,7 +38,9 @@ export async function ensureDefaultRules(): Promise<DownloadRule[]> {
 
 async function readRulesFromSync(): Promise<DownloadRule[]> {
   try {
-    return normalizeStoredRules(await storageGet<DownloadRule[]>(getSyncStorageArea(), RULES_STORAGE_KEY));
+    return normalizeStoredRules(
+      await storageGet<DownloadRule[]>(getSyncStorageArea(), RULES_STORAGE_KEY),
+    );
   } catch (error) {
     logDebug('Could not read rules from sync storage.', error);
     return [];
@@ -47,7 +49,9 @@ async function readRulesFromSync(): Promise<DownloadRule[]> {
 
 async function readRulesFromLocal(): Promise<DownloadRule[]> {
   try {
-    return normalizeStoredRules(await storageGet<DownloadRule[]>(getLocalStorageArea(), RULES_STORAGE_KEY));
+    return normalizeStoredRules(
+      await storageGet<DownloadRule[]>(getLocalStorageArea(), RULES_STORAGE_KEY),
+    );
   } catch (error) {
     logDebug('Could not read rules from local storage.', error);
     return [];
@@ -57,4 +61,3 @@ async function readRulesFromLocal(): Promise<DownloadRule[]> {
 function normalizeStoredRules(value: DownloadRule[] | undefined): DownloadRule[] {
   return Array.isArray(value) ? value : [];
 }
-

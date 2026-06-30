@@ -66,4 +66,3 @@ function parseUrlishValue(value: string): URL | null {
     }
   }
 }
-

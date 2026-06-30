@@ -29,4 +29,3 @@ export async function addRecentRoute(route: RecentRoute): Promise<void> {
     logDebug('Could not persist recent route.', error);
   }
 }
-

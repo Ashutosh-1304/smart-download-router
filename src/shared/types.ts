@@ -40,4 +40,3 @@ export type RecentRoute = {
   routedFilename: string;
   routedAt: string;
 };
-

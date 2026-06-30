@@ -112,4 +112,3 @@ function stripInternalMatchFields(match: InternalMatch): RouteMatch {
     score: match.score,
   };
 }
-

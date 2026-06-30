@@ -37,7 +37,10 @@ export function joinRoutedFilename(folderPath: string, filename: string): string
   return safeFolder ? `${safeFolder}/${safeFilename}` : safeFilename;
 }
 
-export function sanitizePathSegment(input: string | undefined | null, fallback = 'untitled'): string {
+export function sanitizePathSegment(
+  input: string | undefined | null,
+  fallback = 'untitled',
+): string {
   const cleaned = (input ?? '')
     .trim()
     .replace(/[\\/]+/g, '-')
@@ -55,4 +58,3 @@ export function sanitizePathSegment(input: string | undefined | null, fallback =
 
   return WINDOWS_RESERVED_NAMES.test(safe) ? `_${safe}` : safe;
 }
-

@@ -20,9 +20,7 @@ describe('filename and folder sanitization', () => {
 
   it('joins a safe relative folder and filename', () => {
     expect(joinRoutedFilename('dump', 'chapter-1.pdf')).toBe('dump/chapter-1.pdf');
-    expect(joinRoutedFilename('cohort/notes', 'bad:file?.pdf')).toBe(
-      'cohort/notes/bad-file-.pdf',
-    );
+    expect(joinRoutedFilename('cohort/notes', 'bad:file?.pdf')).toBe('cohort/notes/bad-file-.pdf');
   });
 });
 
@@ -55,4 +53,3 @@ describe('rule validation', () => {
     expect(result.valid).toBe(true);
   });
 });
-
