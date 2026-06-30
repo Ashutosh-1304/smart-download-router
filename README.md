@@ -191,22 +191,11 @@ The extension requests:
 
 No host permissions are requested.
 
-## GitHub Publishing
+## GitHub
 
-GitHub CLI was not available on this machine during creation. To publish manually:
+Source repository:
 
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/smart-download-router.git
-git branch -M main
-git push -u origin main
-```
-
-Or, after installing and authenticating GitHub CLI:
-
-```bash
-gh auth login
-gh repo create smart-download-router --public --source=. --remote=origin --push
-```
+https://github.com/Ashutosh-1304/smart-download-router
 
 ## Roadmap
 
